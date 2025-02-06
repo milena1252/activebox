@@ -1,5 +1,86 @@
-* {
+$primary-font: "Raleway", serif;
+$secondary-font: "Cardo", serif;
+$button-color: #FF4343;
+$primary-color: #FFFFFF;
+$text-color: #6C7279;
+$title-color: #2D3033;
+$line-color: #BABBC5;
+$background-color: #252B49;
+$project-background: rgba(255, 67, 67, 0.8);
+$footer-background: #353C65;
+$secondary-footer-background: #2C3154;
+$testimonials-background: #7E5D6F;
+
+@mixin font ($fontSize, $lineHeight, $fontWeight, $color, $fontFamily:$primary-font){
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    color: $color;
+    font-family: $fontFamily;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: $background-color;
+    padding: 38px 0 35px;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 183px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__line{
+        height: 1px;
+        max-width: 1170px;
+        width: 100%;
+        background-color: $line-color;
+        position: absolute;
+        top:98px;
+    }
+}
+
+.nav{
+    &__list{
+        display: flex;
+        column-gap: 4px;
+        list-style-type: none;
+        align-items: center;
+    }
+
+    &__item{
+        min-width: 132px;
+        text-align: center;
+    }
+
+    &__link{
+        @include font(13px, 15px, 700, $primary-color);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+

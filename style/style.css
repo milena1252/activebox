@@ -2,4 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #252B49;
+  padding: 38px 0 35px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 183px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__line {
+  height: 1px;
+  max-width: 1170px;
+  width: 100%;
+  background-color: #BABBC5;
+  position: absolute;
+  top: 98px;
+}
+
+.nav__list {
+  display: flex;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  list-style-type: none;
+  align-items: center;
+}
+.nav__item {
+  min-width: 132px;
+  text-align: center;
+}
+.nav__link {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-family: "Raleway", serif;
+  text-decoration: none;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
