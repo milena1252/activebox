@@ -133,11 +133,15 @@ $testimonials-background: #7E5D6F;
     margin-bottom: 116px;
 
     @media (max-width:1024px) {
-        padding: 257px 0 126px;  
+        padding: 257px 0 126px; 
+        margin-bottom: 78px;
+ 
     }
 
     @media (max-width:767px) {
-        padding: 106px 0 52px;  
+        padding: 106px 0 52px; 
+        margin-bottom: 40px;
+ 
     }
 
     &::after{
@@ -210,14 +214,109 @@ $testimonials-background: #7E5D6F;
             max-width: 314px;
         }
 
-        @media (max-width:1024px) {
+        @media (max-width:767px) {
             max-width: 270px;
+            padding: 16px;
         }
 
     }
 
 
 }
+
+.features{
+
+    margin-bottom: 116px;
+
+    @media (max-width:1024px) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width:767px) {
+        margin-bottom: 35px;
+    }
+
+    
+    &__container{
+        display: flex;
+        flex-wrap: wrap; 
+        row-gap: 88px;
+        column-gap: 30px;
+
+        @media (max-width:1024px) {
+            column-gap: 15px;
+            row-gap: 49px;
+        }
+
+        @media (max-width:767px) {
+            row-gap: 41px;
+        }
+       
+    }
+
+    &__item {
+        flex-basis: 370px;
+
+        @media (max-width:1024px) {
+            flex-basis: 300px;
+        }
+
+        @media (max-width:767px) {
+            flex-basis: 100%;
+        }
+    }
+   
+
+    &__wrapper-icon{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 29px;
+
+        @media (max-width:1024px) {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 23px;
+        }
+
+        @media (max-width:767px) {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 21px;
+        }
+    }
+
+    &__title{
+        @include font(24px, 28px, 900, $title-color);
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        padding: 22px;
+
+        @media (max-width:1024px) {
+            @include font(18px, 21px, 900, $title-color);
+            margin-bottom: 4px;
+        }
+
+        @media (max-width:767px) {
+            padding: 17px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text{
+        @include font(18px, 21px, 400, $text-color);
+        text-align: center;
+
+        @media (max-width:1024px) {
+            @include font(14px, 16px, 400, $text-color);
+        }
+    }
+}
+
+
 
 
 
