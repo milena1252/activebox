@@ -316,6 +316,78 @@ $testimonials-background: #7E5D6F;
     }
 }
 
+.work{
+    margin-bottom: 114px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width:1024px) {
+        margin-bottom: 78px;
+     }
+
+     @media (max-width:767px) {
+        margin-bottom: 35px;
+     }
+
+    &__item{
+        width: 25%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width:767px) {
+           width: 50%;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title{
+        @include font(24px, 28px, 900, $primary-color);
+        text-transform: uppercase;
+
+        @media (max-width:1024px) {
+            @include font(18px, 21px, 900, $primary-color);
+        }
+    }
+
+    &__text{
+        @include font(18px, 21px, 400, $primary-color);
+
+        @media (max-width:1024px) {
+            @include font(14px, 16px, 400, $primary-color);
+        }
+    }
+
+    &__content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        background-color: $project-background;
+        opacity: 0;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &:active{
+            background-color: rgba(185, 12, 12, 0.8);
+            opacity: 1;
+        }
+    }
+}
+
 
 
 
