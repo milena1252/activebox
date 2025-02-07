@@ -26,24 +26,30 @@ $testimonials-background: #7E5D6F;
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1210px;
     width: 100%;
     margin: 0 auto;
-
+    padding: 0 20px;
 }
 
 .header{
     background-color: transparent;
-    padding: 38px 0 35px; 
     position: fixed;
     z-index: 1;
     top: 0;
+    left: 0;
     width: 100%;
+
+    @media (max-width:767px) {
+        padding: 19px 0;
+    }
   
 
     &__container{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
 
     }
 
@@ -54,8 +60,8 @@ $testimonials-background: #7E5D6F;
         justify-content: center;
         align-items: center;
 
-        @media (max-width:1024px) {
-            margin-left: 20px;;
+        @media (max-width:767px) {
+            width: 103px;
         }
     }
 
@@ -64,14 +70,20 @@ $testimonials-background: #7E5D6F;
         width: 100%;
         max-width: 1170px;
         background-color: $line-color;
-        position: absolute;
-        top:98px;
 
+        @media (max-width:767px) {
+            display: none;
+        }
 }
 
 }
 
 .nav{
+
+    @media (max-width:767px) {
+        display: none;
+    }
+
     &__list{
         display: flex;
         column-gap: 4px;
@@ -84,7 +96,7 @@ $testimonials-background: #7E5D6F;
         text-align: center;
 
         @media (max-width:1024px) {
-            min-width: 110px;
+            min-width: 96px;
         }
             
         }
@@ -93,6 +105,8 @@ $testimonials-background: #7E5D6F;
         @include font(13px, 15px, 700, $primary-color);
         text-decoration: none;
         text-transform: uppercase;
+        padding: 38px 0 35px;
+        display: block;
 
         @media (max-width:1024px) {
             @include font(12px, 14px, 700, $primary-color);
@@ -101,7 +115,6 @@ $testimonials-background: #7E5D6F;
     
     &:hover{
         border-bottom: 3px solid #BABBC5;
-        padding: 40px;
             }
     
     &:active{
@@ -117,6 +130,14 @@ $testimonials-background: #7E5D6F;
     background-position: center;
     background-size: cover;
     position: relative;
+
+    @media (max-width:1024px) {
+        padding: 257px 0 126px;  
+    }
+
+    @media (max-width:767px) {
+        padding: 106px 0 52px;  
+    }
 
     &::after{
         content: '';
@@ -144,15 +165,23 @@ $testimonials-background: #7E5D6F;
         @media (max-width:1024px) {
             @include font(48px, 56px, 900, $primary-color);
         }
+
+        @media (max-width:767px) {
+            @include font(36px, 42px, 900, $primary-color);
+        }
     }
 
     &__text{
         @include font(24px, 28px, 400, $primary-color);
         text-align: center;
-        margin-bottom: 79px;
+        margin: 0 auto 79px;
+        max-width: 1000px;
 
         @media (max-width:1024px) {
             @include font(18px, 21px, 400, $primary-color);
+        }
+        @media (max-width:1024px) {
+            @include font(14px, 16px, 400, $primary-color);
         }
     }
 
@@ -178,6 +207,10 @@ $testimonials-background: #7E5D6F;
 
         @media (max-width:1024px) {
             max-width: 314px;
+        }
+
+        @media (max-width:1024px) {
+            max-width: 270px;
         }
 
     }
