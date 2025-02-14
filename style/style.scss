@@ -560,29 +560,25 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     &__info{
         background-color: #5C3249;
-        padding: 133px 170px 161px 129px;
+        padding: 20px 50px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        @media (max-width:1190px) {
-            padding: 70px 109px 120px 90px;
-         }
-
-        @media (max-width:1024px) {
-            padding: 61px 109px 110px 83px;
-         }
-
-         @media (max-width:767px) {
-            padding: 23px 25px 95px 20px;
-         }
     }
 
     &__text{
         @include font(36px, 48px, 400, $primary-color, $secondary-font);
         font-style: italic;
+        max-width: 471px;
+        width: 100%;
         margin-bottom: 24px;
 
         @media (max-width:1024px) {
             @include font(24px, 32px, 400, $primary-color, $secondary-font);
             margin-bottom: 14px;
+            max-width: 330px;
         }
 
          @media (max-width:767px) {
@@ -594,13 +590,17 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     &__name{
         @include font(13px, 15px, 700, $primary-color);
+        max-width: 470px;
+        width: 100%;
 
         @media (max-width:1024px) {
-            @include font(12px, 14px, 700, $primary-color);   
+            @include font(12px, 14px, 700, $primary-color);  
+            max-width: 330px; 
         }
 
         @media (max-width:767px) {
             text-align: center;
+            margin-bottom: 95px;
         }
     }
 
