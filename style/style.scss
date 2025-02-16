@@ -355,9 +355,6 @@ $project-background: rgba(255, 67, 67, 0.8);
         overflow: hidden;
         position: relative;
 
-        @media (max-width:767px) {
-            //width: 49%;
-        }
     }
 
     &__img{
@@ -393,10 +390,18 @@ $project-background: rgba(255, 67, 67, 0.8);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 20px;
+        row-gap: 36px;
         background-color: $project-background;
         opacity: 0;
         padding: 10px;
+
+        @media (max-width:1024px) {
+            row-gap: 22px; 
+        }
+
+        @media (max-width:767px) {
+            row-gap: 2px; 
+        }
 
         &:hover{
             opacity: 1;
@@ -604,6 +609,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         }
     }
 
+
     &__dots{
         display: flex;
         column-gap: 25px;
@@ -620,11 +626,11 @@ $project-background: rgba(255, 67, 67, 0.8);
         border-radius: 50%;
 
         &:nth-child(2){
-            background-color: #7E5D6F;
+           background-color: #7E5D6F;
         }
 
         @media (max-width:1024px) {
-            width: 9px;
+           width: 9px;
             height: 9px;  
         }
 

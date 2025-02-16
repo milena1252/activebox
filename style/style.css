@@ -427,10 +427,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 36px;
   background-color: rgba(255, 67, 67, 0.8);
   opacity: 0;
   padding: 10px;
+}
+@media (max-width: 1024px) {
+  .work__content {
+    row-gap: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .work__content {
+    row-gap: 2px;
+  }
 }
 .work__content:hover {
   opacity: 1;
