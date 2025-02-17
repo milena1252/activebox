@@ -140,7 +140,6 @@ $project-background: rgba(255, 67, 67, 0.8);
     &:active{
         color: #E71414;
         border-bottom: 3px solid #E71414;
-        padding: 40px;
             }
         }
     }  
@@ -263,8 +262,8 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     
     &__container{
-        display: flex;
-        flex-wrap: wrap; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         row-gap: 88px;
         column-gap: 30px;
 
@@ -274,6 +273,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         }
 
         @media (max-width:767px) {
+            grid-template-columns: 1fr;
             row-gap: 41px;
         }
        
@@ -312,16 +312,16 @@ $project-background: rgba(255, 67, 67, 0.8);
     &__title{
         @include font(24px, 28px, 900, $title-color);
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 42px;
         text-transform: uppercase;
 
         @media (max-width:1024px) {
             @include font(18px, 21px, 900, $title-color);
-            margin-bottom: 4px;
+            margin-bottom: 23px;
         }
 
         @media (max-width:767px) {
-            margin-bottom: 0;
+            margin-bottom: 8px;
         }
     }
 
@@ -571,6 +571,11 @@ $project-background: rgba(255, 67, 67, 0.8);
         justify-content: center;
         align-items: center;
 
+        @media (max-width:767px) {
+            display: block;
+            padding: 20px 20px 95px;
+         }
+
     }
 
     &__text{
@@ -588,6 +593,7 @@ $project-background: rgba(255, 67, 67, 0.8);
 
          @media (max-width:767px) {
             @include font(24px, 32px, 400, $primary-color, $secondary-font);
+            max-width: 100%;
             text-align: center;
             margin-bottom: 23px;
          }
@@ -605,7 +611,8 @@ $project-background: rgba(255, 67, 67, 0.8);
 
         @media (max-width:767px) {
             text-align: center;
-            margin-bottom: 95px;
+            max-width: 100%;
+            margin-bottom: 0;
         }
     }
 
@@ -726,32 +733,31 @@ $project-background: rgba(255, 67, 67, 0.8);
 .footer{
 
     background-color: #353C65;
+    padding-top: 71px;
+
+    @media (max-width:767px) {
+       padding-top: 34px;
+     }
 
     &__container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 30px;
         background-color: #353C65;
-        padding: 71px 0;
+        margin-bottom: 71px;
 
         @media (max-width:1024px) {
-           padding: 46px 20px 41px;
+           padding: 0 20px;
+           margin-bottom: 40px;
          }
 
          @media (max-width:767px) {
-            padding: 34px;
             grid-template-columns: 1fr; 
             row-gap: 59px;
+            margin-bottom: 33px;
          }
     }
 
-    &__content{
-
-        &:nth-child(2){
-            display: flex;
-            flex-direction: column;
-        }
-    }
 
     &__title{
         @include font(18px, 21px, 700, $primary-color);
@@ -801,28 +807,35 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     &__copyright{
         background-color: #2C3154; 
-        padding: 24px;
+        padding: 24px 20px;
 
         @media (max-width:1024px) {
-            padding: 14px;
+            padding: 14px 0;
           }
 
           @media (max-width:767px) {
-            padding: 28px;
+            padding: 28px 0;
           } 
      }
 
-     &__copyright-text{
+     &__copyright-wrapper{
         max-width: 370px;
         width: 100%;
         text-align: center;
         margin: 0 auto;
-        @include font(18px, 21px, 400, #808080);
 
         @media (max-width:1024px) {
             max-width: 314px;
+        }
+
+     }
+
+     &__copyright-text{
+        @include font(18px, 21px, 400, #808080);
+
+        @media (max-width:1024px) {
             @include font(14px, 16px, 400,  #808080);
-          }
+        }
 
         & span{
             color:$primary-color;
