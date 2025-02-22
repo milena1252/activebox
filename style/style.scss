@@ -53,11 +53,12 @@ $project-background: rgba(255, 67, 67, 0.8);
     }
 
     &__logo{
-        width: 183px;
+        width: 186px;
         height: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: translateY(3px);
 
         @media (max-width:767px) {
             width: 103px;
@@ -111,7 +112,7 @@ $project-background: rgba(255, 67, 67, 0.8);
     }
 
     &__item{
-        min-width: 132px;
+        min-width: 130px;
         text-align: center;
 
         @media (max-width:1024px) {
@@ -124,9 +125,10 @@ $project-background: rgba(255, 67, 67, 0.8);
         @include font(13px, 15px, 700, $primary-color);
         text-decoration: none;
         text-transform: uppercase;
-        padding: 38px 0 35px;
+        padding: 44px 0 36px;
         display: block;
         border-bottom: 3px solid transparent;
+        transition: all .5s linear;
 
         @media (max-width:1024px) {
             @include font(12px, 14px, 700, $primary-color);
@@ -199,7 +201,7 @@ $project-background: rgba(255, 67, 67, 0.8);
     &__text{
         @include font(24px, 28px, 400, $primary-color);
         text-align: center;
-        margin: 0 auto 79px;
+        margin: 0 auto 80px;
         max-width: 1000px;
 
         @media (max-width:1024px) {
@@ -221,6 +223,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         max-width: 370px;
         width: 100%;
         margin: 0 auto;
+        transition: all .8s linear;
 
         &:hover{
             background-color: #E71414;
@@ -250,7 +253,7 @@ $project-background: rgba(255, 67, 67, 0.8);
 
 .features{
 
-    margin-bottom: 116px;
+    margin-bottom: 133px;
 
     @media (max-width:1024px) {
         margin-bottom: 80px;
@@ -277,16 +280,7 @@ $project-background: rgba(255, 67, 67, 0.8);
             row-gap: 41px;
         }
        
-    }
-
-    &__item {
-        flex-basis: 31%;
-
-        @media (max-width:767px) {
-            flex-basis: 100%;
-        }
-    }
-   
+    }   
 
     &__wrapper-icon{
         width: 100px;
@@ -294,7 +288,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto 29px;
+        margin: 0 auto 51px;
 
         @media (max-width:1024px) {
             width: 85px;
@@ -312,7 +306,7 @@ $project-background: rgba(255, 67, 67, 0.8);
     &__title{
         @include font(24px, 28px, 900, $title-color);
         text-align: center;
-        margin-bottom: 42px;
+        margin-bottom: 43px;
         text-transform: uppercase;
 
         @media (max-width:1024px) {
@@ -394,6 +388,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         background-color: $project-background;
         opacity: 0;
         padding: 10px;
+        transition: all .8s linear;
 
         @media (max-width:1024px) {
             row-gap: 22px; 
@@ -470,7 +465,7 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     &__name{
         @include font(24px, 28px, 700, $title-color);
-        margin-bottom: 5px;
+        margin-bottom: 6px;
 
         @media (max-width:1024px) {
             @include font(18px, 21px, 700, $title-color);
@@ -480,7 +475,7 @@ $project-background: rgba(255, 67, 67, 0.8);
     &__post{
         @include font(18px, 21px, 400, $button-color);
         text-transform: uppercase;
-        margin-bottom: 17px;
+        margin-bottom: 19px;
 
         @media (max-width:1024px) {
             @include font(14px, 16px, 400, $button-color);
@@ -534,20 +529,25 @@ $project-background: rgba(255, 67, 67, 0.8);
 }
 
 .testimonials{
-    margin-bottom: 77px;
+    margin-bottom: 122px;
+    padding-bottom: 45px;
+
+    @media (max-width:1024px) {
+        margin-bottom: 93px;
+        padding-bottom: 33px;
+     }
+
+     @media (max-width:767px) {
+        margin-bottom: 53px;
+        padding-bottom: 32px;
+     }
 
     &__content{
         display: grid;
         grid-template-columns: 49% 51%;
-        margin-bottom: 31px;
-
-        @media (max-width:1024px) {
-            margin-bottom: 24px;
-         }
 
         @media (max-width:767px) {
             grid-template-columns: 1fr;
-            margin-bottom: 23px;
          }
         
     }
@@ -555,6 +555,7 @@ $project-background: rgba(255, 67, 67, 0.8);
     &__wrapper-img{
         display: flex;
         overflow: hidden;
+        aspect-ratio: 1/0.66;
     }
 
     &__img{
@@ -583,7 +584,7 @@ $project-background: rgba(255, 67, 67, 0.8);
         font-style: italic;
         max-width: 471px;
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
 
         @media (max-width:1024px) {
             @include font(24px, 32px, 400, $primary-color, $secondary-font);
@@ -601,6 +602,7 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     &__name{
         @include font(13px, 15px, 700, $primary-color);
+        text-transform: uppercase;
         max-width: 470px;
         width: 100%;
 
@@ -616,32 +618,37 @@ $project-background: rgba(255, 67, 67, 0.8);
         }
     }
 
-
-    &__dots{
-        display: flex;
-        column-gap: 25px;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-    }
-
-    &__slider{
+    .swiper-pagination-bullet{
         width: 14px;
         height: 14px;
         border: 1px solid #7E5D6F;
-        border-radius: 50%;
-
-        &:nth-child(2){
-           background-color: #7E5D6F;
-        }
+        background-color: transparent;
+        opacity: 1;
 
         @media (max-width:1024px) {
-           width: 9px;
-            height: 9px;  
+            width: 9px;
+            height: 9px;    
         }
-
     }
+
+    .swiper-pagination-bullet-active{
+        background-color: #7E5D6F;
+    }
+
+    .swiper-pagination{
+        display: flex;
+        column-gap: 25px;
+        justify-content: center;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 0;
+    }
+   
 }
 
 .download{
@@ -694,12 +701,13 @@ $project-background: rgba(255, 67, 67, 0.8);
         border: none;
         @include font(24px, 28px, 900, $primary-color); 
         text-transform: uppercase;
-        padding: 26px;
+        padding: 25px;
         max-width: 370px;
         width: 100%;
         margin: 0 auto;
         display: block;
         cursor: pointer;
+        transition: all .8s linear;
 
         &:hover{
             background-color: #E71414;
@@ -726,14 +734,16 @@ $project-background: rgba(255, 67, 67, 0.8);
 
     }
                       
-
-    
 }
 
 .footer{
 
     background-color: #353C65;
     padding-top: 71px;
+
+    @media (max-width:1024px) {
+        padding-top: 46px;
+      }
 
     @media (max-width:767px) {
        padding-top: 34px;
@@ -744,11 +754,11 @@ $project-background: rgba(255, 67, 67, 0.8);
         grid-template-columns: repeat(3, 1fr);
         column-gap: 30px;
         background-color: #353C65;
-        margin-bottom: 71px;
+        margin-bottom: 67px;
 
         @media (max-width:1024px) {
            padding: 0 20px;
-           margin-bottom: 40px;
+           margin-bottom: 41px;
          }
 
          @media (max-width:767px) {
@@ -806,20 +816,22 @@ $project-background: rgba(255, 67, 67, 0.8);
     }
 
     &__copyright{
-        background-color: #2C3154; 
-        padding: 24px 20px;
+        background-color: #2C3154;
+        padding: 24px 0;
 
         @media (max-width:1024px) {
             padding: 14px 0;
-          }
+        }
 
-          @media (max-width:767px) {
+        @media (max-width:767px) {
             padding: 28px 0;
           } 
+
      }
 
      &__copyright-wrapper{
-        max-width: 370px;
+        padding: 0 20px;
+        max-width: 410px;
         width: 100%;
         text-align: center;
         margin: 0 auto;
