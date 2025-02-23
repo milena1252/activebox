@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
     <title>ActiveBox</title>
 </head>
@@ -279,23 +280,55 @@
         </div>
     </div>
 
-    <div class="testimonials">
-        <div class="testimonials__content">
-            <div class="testimonials__wrapper-img">
-                <img src="media/bg.png" alt="" class="testimonials__img">
+    <div class="testimonials swiper">
+        <div class="swiper-wrapper">
+            <div class="testimonials__content swiper-slide">
+                <div class="testimonials__wrapper-img">
+                    <img src="media/bg.png" alt="" class="testimonials__img">
+                </div>
+                <div class="testimonials__info">
+                    <p class="testimonials__text">“Integer Posuere Erat A Ante Venenatis Dapibus Posuere Velit Aliquet. Donec Sed Odio Dui. Aenean Eu Leo Quam1...”</p>
+                    <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
             </div>
-            <div class="testimonials__info">
-                <p class="testimonials__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-                <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+            <div class="testimonials__content swiper-slide">
+                <div class="testimonials__wrapper-img">
+                    <img src="media/bg.png" alt="" class="testimonials__img">
+                </div>
+                <div class="testimonials__info">
+                    <p class="testimonials__text">“Integer Posuere Erat A Ante Venenatis Dapibus Posuere Velit Aliquet. Donec Sed Odio Dui. Aenean Eu Leo Quam2...”</p>
+                    <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
+            </div>
+            <div class="testimonials__content swiper-slide">
+                <div class="testimonials__wrapper-img">
+                    <img src="media/bg.png" alt="" class="testimonials__img">
+                </div>
+                <div class="testimonials__info">
+                    <p class="testimonials__text">“Integer Posuere Erat A Ante Venenatis Dapibus Posuere Velit Aliquet. Donec Sed Odio Dui. Aenean Eu Leo Quam3...3”</p>
+                    <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
+            </div>
+            <div class="testimonials__content swiper-slide">
+                <div class="testimonials__wrapper-img">
+                    <img src="media/bg.png" alt="" class="testimonials__img">
+                </div>
+                <div class="testimonials__info">
+                    <p class="testimonials__text">“Integer Posuere Erat A Ante Venenatis Dapibus Posuere Velit Aliquet. Donec Sed Odio Dui. Aenean Eu Leo Quam4...”</p>
+                    <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
+            </div>
+            <div class="testimonials__content swiper-slide">
+                <div class="testimonials__wrapper-img">
+                    <img src="media/bg.png" alt="" class="testimonials__img">
+                </div>
+                <div class="testimonials__info">
+                    <p class="testimonials__text">“Integer Posuere Erat A Ante Venenatis Dapibus Posuere Velit Aliquet. Donec Sed Odio Dui. Aenean Eu Leo Quam5...”</p>
+                    <p class="testimonials__name">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
             </div>
         </div>
-        <div class="testimonials__dots">
-            <a class="testimonials__slider" href=""></a>
-            <a class="testimonials__slider" href=""></a>
-            <a class="testimonials__slider" href=""></a>
-            <a class="testimonials__slider" href=""></a>
-            <a class="testimonials__slider" href=""></a>
-        </div>
+        <div class="swiper-pagination"></div>   
     </div>
 
     <section class="download">
@@ -337,12 +370,23 @@
         </div>
 
         <div class="footer__copyright">
-            <p class="footer__copyright-text">Copyright © 2015 ActiveBox. All Rights Reserved Made With <span>By Kamal Chaneman</span></p>
+            <div class="footer__copyright-wrapper">
+                <p class="footer__copyright-text">Copyright © 2015 ActiveBox. All Rights Reserved Made With <span>By Kamal Chaneman</span></p>
+            </div>
         </div>
 
     </footer>
    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
+    <script>
+        var swiper = new Swiper(".testimonials", {
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
 
    
 </body>
